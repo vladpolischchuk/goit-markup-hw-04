@@ -409,6 +409,8 @@ ul {
 .social-list .link:focus {
     background-color: var(--accent-color);
     color: var(--fourth-text-color);
+
+    outline: none;
 }
 
 .social-list .icon {
@@ -445,6 +447,8 @@ ul {
 .customers-list .link:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
+
+    outline: none;
 }
 
 .customers-list .icon {
@@ -590,10 +594,17 @@ ul {
     margin-left: var(--positive-card-indent);
 }
 
-.cards-list .link:hover{
+.cards-list .card-link {
+    display: block;
+}
+
+.cards-list .card-link:hover,
+.cards-list .card-link:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
                 0 4px 4px rgba(0, 0, 0, 0.06),
                 0 1px 1px rgba(0, 0, 0, 0.12);
+
+    outline: none;
 }
 
 .item-article {
