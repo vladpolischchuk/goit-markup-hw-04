@@ -271,13 +271,17 @@ ul {
     margin-left: 30px;
 }
 
-.icon-features {
-    display: inline-flex;
-    max-width: 270px;
-    max-height: 120px;
-    background-color: var(--secondary-background-color);
-    border-radius: 4px;
+.features-list .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+
     margin-bottom: 30px;
+    border-radius: 4px;
+
+    background-color: var(--secondary-background-color);
 }
 
 .features-subtitle,
@@ -395,12 +399,12 @@ ul {
 
 .social-list .link {
     display: inline-flex;
-    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
 
-    padding-top: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
-    padding-left: 12px;
+    border-radius: 50%;
 
     color: var(--icon-color);
 }
@@ -423,22 +427,30 @@ ul {
 
 .customers-list {
     display: flex;
-    justify-content: space-between;
 
     margin-top: var(--zeroing-indents);
     margin-bottom: var(--zeroing-indents);
     padding-left: var(--zeroing-indents);
 }
 
+.customers-list > .item {
+    width: calc((100%-120px)/5);
+    height: 92px;
+}
+
+.customers-list > .item + .item {
+    margin-left: 30px;
+}
+
 .customers-list .link {
     display: inline-flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-
-    padding-top: 15px;
-    padding-right: 31px;
-    padding-bottom: 15px;
-    padding-left: 31px;
 
     color: var(--icon-color);
 }
@@ -452,8 +464,8 @@ ul {
 }
 
 .customers-list .icon {
-    max-width: 106px;
-    max-height: 60px;
+    width: 106px;
+    height: 60px;
     
     fill: currentColor;
 }
@@ -466,7 +478,7 @@ ul {
     background-color: var(--main-background-color);
 }
 
-.wrapper {
+.container.wrapper {
     display: flex;
 }
 
@@ -520,8 +532,9 @@ ul {
     color: var(--fourth-text-color);
 }
 
-.social-link-dark {
+.social-list .social-link-dark {
     background-color: var(--background-icon-footer);
+    color: var(--fourth-text-color);
 }
 
 /* Cторінка portfolio.html */
